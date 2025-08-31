@@ -14,7 +14,7 @@
     font-family: 'Times New Roman';
     src: url('fonts/TimesNewRoman-Italic.woff2') format('woff2');
     font-weight: 400;
-    font-style: normal;
+    font-style: italic;
     font-display: swap;
 }
 
@@ -22,7 +22,7 @@
 @font-face {
     font-family: 'Times New Roman';
     src: url('fonts/TimesNewRoman-Bold.woff2') format('woff2');
-    font-weight: 400;
+    font-weight: 800;
     font-style: normal;
     font-display: swap;
 }
@@ -31,8 +31,8 @@
 @font-face {
     font-family: 'Times New Roman';
     src: url('fonts/TimesNewRoman-BoldItalic.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
+    font-weight: 800;
+    font-style: italic;
     font-display: swap;
 }
 
