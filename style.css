@@ -40,6 +40,11 @@
 
 /*BASE STYLES*/
 
+::selection {
+    background:#A6A6A6;
+    color: white;
+}
+
 :root {
     --serif-font: 'Times New Roman', serif;
 }
@@ -67,7 +72,7 @@ a {
 }
 
 p {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     line-height: 1.1;
     letter-spacing: -0.0625rem;
 }
@@ -222,6 +227,10 @@ img {
     height: 3rem;
 }
 
+.spacer-small {
+    height: 0.75rem;
+}
+
 .two-column {
     display: flex;
     gap: 0.1rem;
@@ -246,7 +255,7 @@ img {
 
 
 
-/*UTILITIES*/
+/*///////////////////////////////START-CARD///////////////////////////////////////////////////*/
 
 
 .card {
@@ -268,6 +277,10 @@ img {
     margin-left: auto;
     text-align: left;
 }
+
+
+/*///////////////////////////////END-CARD///////////////////////////////////////////////////*/
+/*///////////////////////////////START-HEADING-BUTTON///////////////////////////////////////////////////*/
 
 .heading-button-green {
     display: inline-flex;
@@ -323,4 +336,66 @@ img {
   .heading-button-green span {
     font-size: 1rem;
   }
+}
+
+
+
+/*///////////////////////////////END-HEADING-BUTTON///////////////////////////////////////////////////*/
+/*///////////////////////////////MAIN-ARTWORKD-GRID///////////////////////////////////////////////////*/
+
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    gap: 0.75rem;
+}
+
+@media (max-width: 24rem) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.main-grid > div{
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.main-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.artwork-vertical {
+    display:grid;
+    grid-template-rows: auto;
+    gap: 0.75rem;
+}
+
+.artwork-caption {
+    font-size: 1.1rem;
+    white-space: pre-line;
+    line-height: 1.1;
+    letter-spacing: -0.0625rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+
+
+.artwork-horizontal {
+    display:grid;
+    grid-template-columns: var(--cols, 1fr 1fr);
+}
+
+.artwork-horizontal .artwork-caption {
+    flex-direction: column;
+    padding-left: 0.75rem;
 }
