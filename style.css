@@ -77,6 +77,10 @@ p {
     letter-spacing: -0.0625rem;
 }
 
+p.text-size-large {
+  font-size: 2.25rem;
+}
+
 h1 {
     font-size: 6rem;
     line-height: 1.1;
@@ -165,9 +169,9 @@ button:hover {
 @media only screen and (max-width: 43rem) {
   .button-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* always 2 columns */
-    grid-template-rows: repeat(2, auto);   /* ensures 2 rows */
-    justify-content: center;               /* centers them nicely */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    justify-content: center;
     gap: 0.5rem;
   }
 }
@@ -236,7 +240,7 @@ img {
     gap: 0.1rem;
 }
 
-.two-column .column {
+.column {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -260,6 +264,7 @@ img {
 
 .card {
     background-color: #B46A2A;
+    margin: 0.75rem 0;
     padding: 0.75rem;
     width: 100%;
     display: flex;
@@ -309,6 +314,7 @@ img {
 .heading-button-grey {
     display: inline-flex;
     align-items: flex-start;
+    width: 100%;
     padding: 1px;
     border-radius: 999rem;
     background: linear-gradient(to top, #000000c3, #00000048, #ffffff7b);
@@ -332,10 +338,20 @@ img {
 }
 
 @media only screen and (max-width: 50rem) {
-  .heading-button-grey span,
+  .heading-button-grey span {
+    font-size: 1rem;
+    padding: 0rem 0.4rem;
+  }
+}
+
+@media only screen and (max-width: 50rem) {
   .heading-button-green span {
     font-size: 1rem;
   }
+}
+
+.heading-button-grey-container {
+  display: flex;
 }
 
 
@@ -399,3 +415,37 @@ img {
     flex-direction: column;
     padding-left: 0.75rem;
 }
+
+/*///////////////////////////////ABOUT-PGAE-GRID///////////////////////////////////////////////////*/
+  .about-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.75rem;
+  }
+
+  @media (max-width: 60rem) { 
+    .about-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 30rem) { 
+    .about-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+    }
+  }
+
+  @media (max-width: 24rem) { 
+    .about-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+    }
+  }
+
+  .about-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
