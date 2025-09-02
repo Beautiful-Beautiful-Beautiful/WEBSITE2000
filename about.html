@@ -48,8 +48,8 @@
             <script>
             const imageGrid = document.getElementById('imageGrid');
 
-            // Create an array with numbers 1 to 160
-            const imageNumbers = Array.from({ length: 160 }, (_, i) => i + 1);
+            // Create an array with numbers 1 to 44
+            const imageNumbers = Array.from({ length: 44 }, (_, i) => i + 1);
 
             // Shuffle the array using Fisher-Yates algorithm
             for (let i = imageNumbers.length - 1; i > 0; i--) {
@@ -61,7 +61,7 @@
             imageNumbers.forEach(i => {
                 const img = document.createElement('img');
                 const number = i.toString().padStart(3, '0');
-                img.src = `images/about/about_portrait_${number}.jpg`;
+                img.src = `images/about/about_portrait_${number}.webp`;
                 img.alt = `About Portrait ${number}`;
                 imageGrid.appendChild(img);
             });

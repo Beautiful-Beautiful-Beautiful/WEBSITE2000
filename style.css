@@ -419,29 +419,23 @@ img {
 /*///////////////////////////////ABOUT-PGAE-GRID///////////////////////////////////////////////////*/
   .about-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 0.75rem;
   }
 
-  @media (max-width: 60rem) { 
+  @media (max-width: 120rem) { 
     .about-grid {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
-  @media (max-width: 30rem) { 
+  @media (max-width: 50rem) { 
     .about-grid {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(1, 1fr);
       gap: 0.75rem;
     }
   }
 
-  @media (max-width: 24rem) { 
-    .about-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0.5rem;
-    }
-  }
 
   .about-grid img {
     width: 100%;
