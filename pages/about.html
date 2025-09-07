@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 
     <link rel="preload" href="/fonts/TimesNewRoman-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/TimesNewRoman-Bold.woff2" as="font" type="font/woff2" crossorigin>
@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <main class="container">
 
         <div class="section-grey">
             <div class="column">
@@ -72,7 +72,7 @@
             imageNumbers.forEach(i => {
                 const img = document.createElement('img');
                 const number = i.toString().padStart(3, '0');
-                img.src = `images/about/about_portrait_${number}.webp`;
+                img.src = `../images/about/about_portrait_${number}.webp`;
                 img.alt = `About Portrait ${number}`;
                 imageGrid.appendChild(img);
             });
@@ -82,16 +82,16 @@
 
 
         <!-- buttons -->
-         <div class ="button-container">
-             <button>Home</button>
-             <button>About</button>
-             <button>CV</button>
-             <button>Socials</button>
-         </div>
-    </div>
+         <nav class ="button-container">
+             <a href="../index.html"><button>Home</button></a>
+             <a href="about.html"><button>About</button></a>
+             <a href="cv.html"><button>CV</button></a>
+             <a href="socials.html"><button>Socials</button></a>
+         </nav>
+        </main>
 
     <div class="background-gradient"></div>
 
-    <script src="particles.js"></script>
+    <script src="../particles.js"></script>
 </body>
 </html>
