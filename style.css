@@ -195,7 +195,6 @@ img {
 
 .section-content {
     padding: 2rem;
-    background-color: #F316B0;
 }
 
 @media only screen and (max-width: 50rem) {
@@ -214,6 +213,7 @@ img {
 
 .container {
     margin: 0 auto;
+    background-color: #F316B0;
  
 }
 
@@ -415,8 +415,9 @@ img {
 /*///////////////////////////////MAIN-ARTWORKD-GRID///////////////////////////////////////////////////*/
 
 .main-grid {
+    margin: 1rem 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
     gap: 0.75rem;
 }
 
