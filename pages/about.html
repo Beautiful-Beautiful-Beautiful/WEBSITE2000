@@ -2,95 +2,138 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About</title>
 
-    <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../style.css" />
 
-    <link rel="preload" href="/fonts/TimesNewRoman-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/TimesNewRoman-Bold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/TimesNewRoman-Italic.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/TimesNewRoman-BoldItalic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/TimesNewRoman-Regular.woff2" as="font" type="font/woff2" crossorigin />
 </head>
 
 <body>
-    <main class="container">
+  <main class="container">
+    <header class="section-grey">
+      <div class="column">
+        <div class="heading-button-grey"><span>About</span></div>
+        <div class="heading-button-grey"><span>À propos</span></div>
+      </div>
 
-        <header class="section-grey">
-            <div class="column">
-                <div class="heading-button-grey"><span>About</span></div>
-                <div class="heading-button-grey"><span>À propos</span></div>
-            </div>
+      <div class="column">
+        <div class="heading-button-grey-large">
+          <span>
+            <h1>My art is my suffering</h1>
+          </span>
+        </div>
+                <div class="heading-button-grey-large">
+          <span>
+            <h1>Mon art est ma souffrance</h1>
+          </span>
+        </div>
 
-            <div class="spacer-medium"></div>
-            
-            <div class="column">
-                <div class="heading-button-grey-large"><span><h1>My art is my suffering</h1></span></div>
-                <div class="heading-button-grey-medium"><span>Always searching</span></div>
-            </div>
-        
+      </div>
+      <div class="two-column">
+        <div class="column">
+          <p class="text-size-large">
+          Je suis artiste visuel et designer interactif. J’ai fais beaucoup de
+          peinture mais je travaille aujourd’hui plutôt sur ordinateur, quand
+          j’ai le temps. J’aime créer des images marquées par notre époque avec
+          les derniers outils et les dernières vogues.
+         </p>
+          <p class="text-size-large">
+           Je crée actuellement un jeu vidéo sur l’obsession de collection (TCG
+            et Mystery Box) sur fond d’ultra violence gratuite dans une esthétique
+           cauchemardesque et carnavalesque.
+           </p>
+        </div>
+        <div class="column">
+              <p class="text-size-large">
+            I am a visual artist and interactive designer. I’ve done a lot of
+            painting, but nowadays I work mostly on the computer, when I have the
+            time. I like creating images that reflect our era, using the latest
+            tools and trends.
+            </p>
+              <p class="text-size-large">
+            I am currently creating a video game about the obsession with
+            collecting (TCG and Mystery Box), set against a backdrop of gratuitous
+            ultraviolence in a nightmarish, carnivalesque aesthetic.
+              </p>
+        </div>
 
-        </header>
-        
-        <section class="section-content">
+      
+      </div>
 
-            <!-- spacer -->
-            <div class="spacer-medium"></div>
+    </header>
+    
+    <section class="about-grid" id="imageGrid"></section>
 
-            <div class="heading-button-green"><span>Moi</span></div>
+    <div class="column">
+      <div class="heading-button-grey-large">
+        <span>
+          <h2>i’m like a vampyr</h2>
+        </span>
+      </div>
+      <div class="heading-button-grey-large">
+        <span>
+          <h2>always sucking</h2>
+        </span>
+      </div>
+      <div class="heading-button-grey-large">
+        <span>
+          <h2>always drinking</h2>
+        </span>
+      </div>
+      <div class="heading-button-grey-large">
+        <span>
+          <h2>tired of being drunk</h2>
+        </span>
+      </div>
+      <div class="heading-button-grey-large">
+        <span>
+          <h2>I wake up in pain</h2>
+        </span>
+      </div>
 
-            <!-- spacer -->
-            <div class="spacer-medium"></div>
-            <p class="text-size-large"><span lang="fr"></span>Je suis artiste visuel et designer interactif. J’ai fais beaucoup de peinture mais je travaille aujourd’hui plutôt sur ordinateur, quand j’ai le temps. J’aime créer des images marquées par notre époque avec les derniers outils et les dernières vogues.</p>    
-            <p class="text-size-large"><span lang="fr"></span>Je crée actuellement un jeu vidéo sur l’obsession de collection (TCG et Mystery Box) sur fond d’ultra violence gratuite dans une esthétique cauchemardesque et carnavalesque.</p>    
-            <div class="spacer-medium"></div>
-            <div class="heading-button-green"><span>Myself</span></div>
-            <div class="spacer-medium"></div>
-            <p class="text-size-large">I am a visual artist and interactive designer. I’ve done a lot of painting, but nowadays I work mostly on the computer, when I have the time. I like creating images that reflect our era, using the latest tools and trends.</p>    
-            <p class="text-size-large">I am currently creating a video game about the obsession with collecting (TCG and Mystery Box), set against a backdrop of gratuitous ultraviolence in a nightmarish, carnivalesque aesthetic.</p>    
-            <div class="spacer-medium"></div>
+    </div>
+    <script>
+      const imageGrid = document.getElementById("imageGrid");
+
+      // Create an array with numbers 1 to 44
+      const imageNumbers = Array.from({ length: 44 }, (_, i) => i + 1);
+
+      // Shuffle the array using Fisher-Yates algorithm
+      for (let i = imageNumbers.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [imageNumbers[i], imageNumbers[j]] = [
+          imageNumbers[j],
+          imageNumbers[i],
+        ];
+      }
+
+      // Add images to the grid in shuffled order
+      imageNumbers.forEach((i) => {
+        const img = document.createElement("img");
+        const number = i.toString().padStart(3, "0");
+        img.src = `../images/about/about_portrait_${number}.webp`;
+        img.alt = `About Portrait ${number}`;
+        imageGrid.appendChild(img);
+      });
+    </script>
 
 
 
-            <div class="about-grid" id="imageGrid"></div>
+  </main>
 
-            <script>
-            const imageGrid = document.getElementById('imageGrid');
+  <nav class="button-container">
+    <a href="../index.html"><button>Home</button></a>
+    <a href="about.html"><button>About</button></a>
+    <a href="cv.html"><button>CV</button></a>
+    <a href="socials.html"><button>Socials</button></a>
+  </nav>
 
-            // Create an array with numbers 1 to 44
-            const imageNumbers = Array.from({ length: 44 }, (_, i) => i + 1);
+  <div class="background-gradient"></div>
 
-            // Shuffle the array using Fisher-Yates algorithm
-            for (let i = imageNumbers.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [imageNumbers[i], imageNumbers[j]] = [imageNumbers[j], imageNumbers[i]];
-            }
-
-            // Add images to the grid in shuffled order
-            imageNumbers.forEach(i => {
-                const img = document.createElement('img');
-                const number = i.toString().padStart(3, '0');
-                img.src = `../images/about/about_portrait_${number}.webp`;
-                img.alt = `About Portrait ${number}`;
-                imageGrid.appendChild(img);
-            });
-            </script>
-
-
-
-        </section>
-    </main>
-
-    <nav class ="button-container">
-        <a href="../index.html"><button>Home</button></a>
-        <a href="about.html"><button>About</button></a>
-        <a href="cv.html"><button>CV</button></a>
-        <a href="socials.html"><button>Socials</button></a>
-    </nav>
-
-    <div class="background-gradient"></div>
-
-    <script src="../particles.js"></script>
+  <script src="../particles.js"></script>
 </body>
+
 </html>
