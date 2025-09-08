@@ -99,7 +99,7 @@ h2 {
 }
 
 @media only screen and (max-width: 43rem) {
-  h2 {
+  h1, h2 {
     font-size: 3rem;
     line-height: 0.8;
     letter-spacing: -0.1rem;
@@ -154,7 +154,7 @@ button:hover {
 @media only screen and (max-width: 43rem) {
   button {
   font-size: clamp(1.5rem, 15vw, 8rem);
-    padding-top: clamp(0.5rem, 15vw, 2.5rem);
+  padding-top: clamp(0.5rem, 15vw, 2.5rem);
   padding-bottom: clamp(0.5rem, 15vw, 2.5rem);
   letter-spacing: clamp(-0.125rem, -1vw, -0.375rem);
   width: 100%;
@@ -284,6 +284,10 @@ img {
 
 .spacer-medium {
     height: 3rem;
+}
+
+.spacer-footer{
+  min-height: 50vh;
 }
 
 .spacer-small {
@@ -443,6 +447,12 @@ img {
     text-align: center;
     position: relative;
     z-index: 1;
+}
+
+@media only screen and (max-width: 50rem) {
+  .heading-button-grey-large span {
+    padding: 10rem 0.4rem;
+  }
 }
 
 
