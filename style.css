@@ -111,8 +111,17 @@ a h1, a h2, a h3, a h4 {
   text-decoration: none;
 }
 
+@media only screen and (max-width: 43rem) {
+  a h2{
+    font-size:11vw;
+  }
+}
+
+a:hover h2 {
+  text-decoration: underline;
+}
+
 a:hover h1,
-a:hover h2,
 a:hover h3,
 a:hover h4 {
   text-decoration: none;
@@ -301,6 +310,11 @@ img {
 
 .spacer-footer{
   min-height: 50vh;
+}
+
+.spacer-footer-grey{
+  min-height: 50vh;
+  background-color:#A6A6A6;
 }
 
 .spacer-small {
